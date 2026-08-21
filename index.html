@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>প্রবাসী ও যুব কল্যাণ সমবায় সমিতি</title>
+
+  <meta name="description"
+    content="প্রবাসী ও যুব কল্যাণ সমবায় সমিতি - ঐক্য, সহযোগিতা, উন্নয়ন ও কল্যাণ">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #2563eb;
+      --secondary: #06b6d4;
+      --green: #16a34a;
+      --dark: #07152e;
+      --text: #172033;
+      --muted: #64748b;
+      --light: #f5f8ff;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: "Noto Sans Bengali", Arial, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .top-bar {
+      background: #040c1c;
+      color: #dbeafe;
+      padding: 8px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .top-social {
+      display: flex;
+      gap: 8px;
+    }
+
+    .top-social a {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.10);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+    }
+
+    .top-social a:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #e5eaf2;
+      box-shadow: 0 5px 25px rgba(0,0,0,.05);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 13px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--dark);
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      box-shadow: 0 8px 20px rgba(37,99,235,.25);
+    }
+
+    .brand h1 {
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .brand small {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    nav a {
+      color: #334155;
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+      background: #eff6ff;
+    }
+
+    .nav-btn {
+      background: var(--primary);
+      color: white !important;
+      padding: 10px 17px !important;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 650px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(6,182,212,.35),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(37,99,235,.35),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #061127 0%,
+          #0b2860 55%,
+          #075985 100%
+        );
+      color: white;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.08);
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge span {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #4ade80;
+    }
+
+    .hero h2 {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.25;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero h2 strong {
+      background: linear-gradient(
+        90deg,
+        #67e8f9,
+        #60a5fa
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      font-size: 17px;
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.3);
+      color: white;
+      background: rgba(255,255,255,.07);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.20);
+      backdrop-filter: blur(20px);
+      padding: 30px;
+      border-radius: 28px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.20);
+    }
+
+    .hero-card-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      font-size: 14px;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(74,222,128,.18);
+      color: #86efac;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================
+       COMMON
+    ========================= */
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 85px 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      color: var(--primary);
+      background: #eff6ff;
+      padding: 5px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: 34px;
+      line-height: 1.35;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .about-card {
+      background: white;
+      border: 1px solid #e7edf7;
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 15px 45px rgba(15,35,75,.08);
+    }
+
+    .about-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+
+    .about-card p {
+      color: #596579;
+      font-size: 15px;
+    }
+
+    .mission-list {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .mission {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .mission-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats-section {
+      padding-top: 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: linear-gradient(
+        135deg,
+        #0b2860,
+        #075985
+      );
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(7,89,133,.20);
+    }
+
+    .stat {
+      padding: 32px 15px;
+      text-align: center;
+      color: white;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat-icon {
+      font-size: 25px;
+    }
+
+    .stat h3 {
+      font-size: 35px;
+    }
+
+    .stat p {
+      color: #bfdbfe;
+      font-size: 13px;
+    }
+
+    /* =========================
+       ACTIVITIES
+    ========================= */
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .activity {
+      background: white;
+      border: 1px solid #e7edf7;
+      border-radius: 22px;
+      padding: 28px 22px;
+      box-shadow: 0 10px 35px rgba(15,35,75,.07);
+      transition: .35s;
+    }
+
+    .activity:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(15,35,75,.13);
+    }
+
+    .activity-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 17px;
+      background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #ecfeff
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 29px;
+      margin-bottom: 20px;
+    }
+
+    .activity h3 {
+      color: var(--dark);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .activity p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       NOTICE
+    ========================= */
+
+    .notice-box {
+      background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #ecfeff
+      );
+      border: 1px solid #dbeafe;
+      border-radius: 24px;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .notice-icon {
+      width: 65px;
+      height: 65px;
+      background: var(--primary);
+      color: white;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .notice-box h3 {
+      color: var(--dark);
+    }
+
+    .notice-box p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       MEMBERS
+    ========================= */
+
+    .members {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .member {
+      background: white;
+      border: 1px solid #e7edf7;
+      border-radius: 24px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 35px rgba(15,35,75,.07);
+      transition: .3s;
+    }
+
+    .member:hover {
+      transform: translateY(-6px);
+    }
+
+    .member-avatar {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+      );
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 29px;
+      font-weight: 800;
+    }
+
+    .member h3 {
+      color: var(--dark);
+      font-size: 18px;
+    }
+
+    .member p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .member-role {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: #eff6ff;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: linear-gradient(
+        135deg,
+        #07152e,
+        #0b2860
+      );
+      color: white;
+      border-radius: 30px;
+      padding: 45px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      box-shadow: 0 25px 60px rgba(7,21,46,.18);
+    }
+
+    .contact h2 {
+      font-size: 31px;
+      margin-bottom: 10px;
+    }
+
+    .contact-intro {
+      color: #bfdbfe;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .contact-items {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #e0f2fe;
+      font-size: 14px;
+    }
+
+    .contact-item-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,.10);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-item a {
+      color: #bae6fd;
+      font-weight: 600;
+    }
+
+    .contact-form {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      padding: 25px;
+    }
+
+    .contact-form h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-form p {
+      color: #cbd5e1;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .contact-form .btn-primary {
+      color: var(--primary);
+    }
+
+    .contact-form .btn-outline {
+      color: white;
+    }
+
+    /* =========================
+       SOCIAL MEDIA
+    ========================= */
+
+    .social-section {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 70px;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .social-btn {
+      padding: 13px 22px;
+      border-radius: 12px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 8px 20px rgba(15,35,75,.06);
+      transition: .3s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #040c1c;
+      color: white;
+      padding: 45px 20px 85px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 55px;
+      height: 55px;
+      margin: auto auto 12px;
+      border-radius: 17px;
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+    }
+
+    footer h3 {
+      font-size: 20px;
+    }
+
+    footer p {
+      color: #94a3b8;
+      font-size: 12px;
+      margin: 4px 0;
+    }
+
+    .footer-links {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    .copyright {
+      margin-top: 25px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    /* =========================
+       MOBILE NAV
+    ========================= */
+
+    .mobile-nav {
+      display: none;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-card {
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .activities {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .stat:nth-child(3),
+      .stat:nth-child(4) {
+        border-top: 1px solid rgba(255,255,255,.12);
+      }
+    }
+
+    @media (max-width: 800px) {
+
+      nav {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .members {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: auto;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .top-bar {
+        display: none;
+      }
+
+      .navbar {
+        padding: 10px 15px;
+      }
+
+      .brand h1 {
+        font-size: 14px;
+      }
+
+      .brand small {
+        font-size: 9px;
+      }
+
+      .logo {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+      }
+
+      .hero-container {
+        padding: 65px 17px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .hero-buttons {
+        width: 100%;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .hero-card {
+        padding: 22px;
+      }
+
+      section {
+        padding: 60px 15px;
+      }
+
+      .section-heading h2 {
+        font-size: 27px;
+      }
+
+      .about-card {
+        padding: 25px;
+      }
+
+      .activities {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .activity {
+        padding: 20px 15px;
+      }
+
+      .activity-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+      }
+
+      .activity h3 {
+        font-size: 15px;
+      }
+
+      .activity p {
+        font-size: 12px;
+      }
+
+      .notice-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .notice-icon {
+        margin: auto;
+      }
+
+      .contact {
+        padding: 28px 20px;
+        border-radius: 22px;
+      }
+
+      .contact h2 {
+        font-size: 26px;
+      }
+
+      .social-buttons {
+        flex-direction: column;
+      }
+
+      .social-btn {
+        width: 100%;
+      }
+
+      .mobile-nav {
+        position: fixed;
+        display: flex;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 2000;
+        background: rgba(7,21,46,.96);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 18px;
+        padding: 8px 5px;
+        justify-content: space-around;
+        box-shadow: 0 15px 35px rgba(0,0,0,.25);
+      }
+
+      .mobile-nav a {
+        color: #cbd5e1;
+        text-align: center;
+        font-size: 9px;
+        padding: 4px 8px;
+      }
+
+      .mobile-nav a span {
+        display: block;
+        font-size: 18px;
+      }
+
+      footer {
+        padding-bottom: 100px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .hero h2 {
+        font-size: 29px;
+      }
+
+      .activities {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <div class="top-bar">
+
+    <span>
+      🇧🇩 ঐক্য • সহযোগিতা • উন্নয়ন • কল্যাণ
+    </span>
+
+    <div class="top-social">
+
+      <a
+        href="https://www.facebook.com/share/19eXNnKw2X/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Facebook"
+      >
+        f
+      </a>
+
+      <a
+        href="https://www.youtube.com/@sktelevision6784"
+        target="_blank"
+        rel="noopener"
+        aria-label="YouTube"
+      >
+        ▶
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="navbar">
+
+      <a href="#home" class="brand">
+
+        <div class="logo">
+          🤝
+        </div>
+
+        <div>
+
+          <h1>
+            প্রবাসী ও যুব কল্যাণ<br>
+            সমবায় সমিতি
+          </h1>
+
+          <small>
+            ঐক্যে শক্তি • সহযোগিতায় উন্নয়ন
+          </small>
+
+        </div>
+
+      </a>
+
+
+      <nav>
+
+        <a href="#home">
+          হোম
+        </a>
+
+        <a href="#about">
+          আমাদের সম্পর্কে
+        </a>
+
+        <a href="#activities">
+          কার্যক্রম
+        </a>
+
+        <a href="#members">
+          সদস্যবৃন্দ
+        </a>
+
+        <a href="#contact" class="nav-btn">
+          যোগাযোগ
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-container">
+
+      <div>
+
+        <div class="hero-badge">
+          <span></span>
+          আমাদের সাথে এগিয়ে চলুন
+        </div>
+
+        <h2>
+          <strong>একসাথে এগিয়ে যাই</strong><br>
+          সমৃদ্ধির পথে
+        </h2>
+
+        <p>
+          প্রবাসী ও যুব সমাজের ঐক্য,
+          সহযোগিতা, কর্মসংস্থান, মানবিক
+          সহায়তা এবং সামাজিক উন্নয়নের
+          লক্ষ্যে আমাদের সম্মিলিত পথচলা।
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#about" class="btn btn-primary">
+            📖 আমাদের সম্পর্কে
+          </a>
+
+          <a href="#activities" class="btn btn-green">
+            🤝 আমাদের কার্যক্রম
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            📞 যোগাযোগ
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="hero-card-icon">
+          🌱
+        </div>
+
+        <h3>
+          আমাদের লক্ষ্য
+        </h3>
+
+        <p>
+          ঐক্যবদ্ধ প্রবাসী ও যুব সমাজের
+          মাধ্যমে একটি সুন্দর ও স্বনির্ভর
+          ভবিষ্যৎ গড়ে তোলা।
+        </p>
+
+        <div class="hero-card-item">
+          <div class="check">✓</div>
+          সামাজিক কল্যাণ
+        </div>
+
+        <div class="hero-card-item">
+          <div class="check">✓</div>
+          যুব উন্নয়ন ও কর্মসংস্থান
+        </div>
+
+        <div class="hero-card-item">
+          <div class="check">✓</div>
+          শিক্ষা ও মানবিক সহায়তা
+        </div>
+
+        <div class="hero-card-item">
+          <div class="check">✓</div>
+          পারস্পরিক সহযোগিতা
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section id="about">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        আমাদের পরিচয়
+      </span>
+
+      <h2>
+        আমাদের সম্পর্কে
+      </h2>
+
+      <p>
+        সমৃদ্ধ সমাজ গড়ার প্রত্যয়ে
+        আমাদের সম্মিলিত পথচলা।
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+      <div class="about-card">
+
+        <h3>
+          🌿 আমাদের সংগঠন
+        </h3>
+
+        <p>
+          <strong>
+            প্রবাসী ও যুব কল্যাণ সমবায় সমিতি
+          </strong>
+          একটি সামাজিক ও কল্যাণমূলক উদ্যোগ।
+          প্রবাসী ও যুব সমাজকে ঐক্যবদ্ধ করে
+          পারস্পরিক সহযোগিতা, কর্মসংস্থান,
+          শিক্ষা, মানবিক সহায়তা এবং সামাজিক
+          উন্নয়নে কাজ করাই আমাদের মূল লক্ষ্য।
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>
+          🎯 আমাদের উদ্দেশ্য
+        </h3>
+
+        <div class="mission-list">
+
+          <div class="mission">
+
+            <div class="mission-icon">
+              ✓
+            </div>
+
+            <div>
+              <strong>
+                ঐক্যবদ্ধ সমাজ
+              </strong>
+
+              <p>
+                সদস্যদের মধ্যে পারস্পরিক
+                সম্পর্ক ও সহযোগিতা বৃদ্ধি।
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="mission">
+
+            <div class="mission-icon">
+              ✓
+            </div>
+
+            <div>
+              <strong>
+                যুব উন্নয়ন
+              </strong>
+
+              <p>
+                যুবকদের দক্ষতা ও কর্মসংস্থানে
+                সহযোগিতা করা।
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="mission">
+
+            <div class="mission-icon">
+              ✓
+            </div>
+
+            <div>
+              <strong>
+                মানবিক কল্যাণ
+              </strong>
+
+              <p>
+                অসহায় ও বিপদগ্রস্ত মানুষের
+                পাশে দাঁড়ানো।
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       STATS
+  ========================== -->
+
+  <section class="stats-section">
+
+    <div class="stats">
+
+      <div class="stat">
+
+        <div class="stat-icon">
+          👥
+        </div>
+
+        <h3>
+          ১০০+
+        </h3>
+
+        <p>
+          সদস্য
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div class="stat-icon">
+          🌱
+        </div>
+
+        <h3>
+          ২৫+
+        </h3>
+
+        <p>
+          সামাজিক উদ্যোগ
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div class="stat-icon">
+          ❤️
+        </div>
+
+        <h3>
+          ১০+
+        </h3>
+
+        <p>
+          কল্যাণমূলক কার্যক্রম
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div class="stat-icon">
+          🤝
+        </div>
+
+        <h3>
+          ১
+        </h3>
+
+        <p>
+          ঐক্যবদ্ধ পরিবার
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ACTIVITIES
+  ========================== -->
+
+  <section id="activities">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        আমাদের কাজ
+      </span>
+
+      <h2>
+        আমাদের কার্যক্রম
+      </h2>
+
+      <p>
+        মানুষের কল্যাণে এবং সমাজের উন্নয়নে
+        আমাদের বিভিন্ন উদ্যোগ।
+      </p>
+
+    </div>
+
+
+    <div class="activities">
+
+      <div class="activity">
+
+        <div class="activity-icon">
+          🤝
+        </div>
+
+        <h3>
+          পারস্পরিক সহযোগিতা
+        </h3>
+
+        <p>
+          সদস্যদের মধ্যে সহযোগিতা ও
+          প্রয়োজনের সময়ে একে অপরের
+          পাশে দাঁড়ানো।
+        </p>
+
+      </div>
+
+
+      <div class="activity">
+
+        <div class="activity-icon">
+          💼
+        </div>
+
+        <h3>
+          কর্মসংস্থান
+        </h3>
+
+        <p>
+          যুব সমাজের কর্মসংস্থান ও
+          উদ্যোক্তা তৈরিতে সহযোগিতা।
+        </p>
+
+      </div>
+
+
+      <div class="activity">
+
+        <div class="activity-icon">
+          🎓
+        </div>
+
+        <h3>
+          শিক্ষা সহায়তা
+        </h3>
+
+        <p>
+          শিক্ষার্থীদের উৎসাহিত করা এবং
+          প্রয়োজনীয় সহায়তা প্রদান।
+        </p>
+
+      </div>
+
+
+      <div class="activity">
+
+        <div class="activity-icon">
+          ❤️
+        </div>
+
+        <h3>
+          মানবিক সহায়তা
+        </h3>
+
+        <p>
+          অসহায় ও বিপদগ্রস্ত মানুষের পাশে
+          দাঁড়ানো এবং সহযোগিতা করা।
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       NOTICE
+  ========================== -->
+
+  <section>
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        নোটিশ
+      </span>
+
+      <h2>
+        গুরুত্বপূর্ণ তথ্য
+      </h2>
+
+    </div>
+
+
+    <div class="notice-box">
+
+      <div class="notice-icon">
+        📢
+      </div>
+
+      <div>
+
+        <h3>
+          সমিতির সকল সদস্যের প্রতি শুভেচ্ছা
+        </h3>
+
+        <p>
+          সমিতির নতুন কার্যক্রম, সভা,
+          সদস্য সংক্রান্ত তথ্য ও গুরুত্বপূর্ণ
+          ঘোষণা এখানে প্রকাশ করা যাবে।
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MEMBERS
+  ========================== -->
+
+  <section id="members">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        আমাদের টিম
+      </span>
+
+      <h2>
+        পরিচালনা ও সদস্যবৃন্দ
+      </h2>
+
+      <p>
+        সংগঠনের দায়িত্বশীল ব্যক্তিবর্গ।
+      </p>
+
+    </div>
+
+
+    <div class="members">
+
+      <div class="member">
+
+        <div class="member-avatar">
+          স
+        </div>
+
+        <h3>
+          সভাপতি
+        </h3>
+
+        <p>
+          সমিতির সভাপতি
+        </p>
+
+        <span class="member-role">
+          সভাপতি
+        </span>
+
+      </div>
+
+
+      <div class="member">
+
+        <div class="member-avatar">
+          স
+        </div>
+
+        <h3>
+          সাধারণ সম্পাদক
+        </h3>
+
+        <p>
+          সমিতির সাধারণ সম্পাদক
+        </p>
+
+        <span class="member-role">
+          সাধারণ সম্পাদক
+        </span>
+
+      </div>
+
+
+      <div class="member">
+
+        <div class="member-avatar">
+          ক
+        </div>
+
+        <h3>
+          কোষাধ্যক্ষ
+        </h3>
+
+        <p>
+          সমিতির কোষাধ্যক্ষ
+        </p>
+
+        <span class="member-role">
+          কোষাধ্যক্ষ
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section id="contact">
+
+    <div class="contact">
+
+      <div>
+
+        <span class="section-tag">
+          যোগাযোগ
+        </span>
+
+        <h2>
+          আমাদের সাথে যোগাযোগ করুন
+        </h2>
+
+        <p class="contact-intro">
+          যেকোনো তথ্য, পরামর্শ বা সহযোগিতার
+          জন্য আমাদের সাথে যোগাযোগ করতে পারেন।
+        </p>
+
+
+        <div class="contact-items">
+
+          <!-- PHONE -->
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              📞
+            </div>
+
+            <div>
+
+              ফোন:
+
+              <a href="tel:+8801928807515">
+                +8801928807515
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- WHATSAPP -->
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              💬
+            </div>
+
+            <div>
+
+              WhatsApp:
+
+              <a
+                href="https://wa.me/8801928807515"
+                target="_blank"
+                rel="noopener"
+              >
+                WhatsApp-এ মেসেজ করুন
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              📧
+            </div>
+
+            <div>
+
+              ইমেইল:
+
+              <a href="mailto:mdrafipk3@gmail.com">
+                mdrafipk3@gmail.com
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUICK CONTACT -->
+
+      <div class="contact-form">
+
+        <h3>
+          💬 দ্রুত যোগাযোগ
+        </h3>
+
+        <p>
+          আপনার প্রয়োজন অনুযায়ী নিচের
+          যেকোনো মাধ্যমে আমাদের সাথে
+          যোগাযোগ করুন।
+        </p>
+
+
+        <a
+          class="btn btn-green"
+          href="https://wa.me/8801928807515"
+          target="_blank"
+          rel="noopener"
+        >
+          💬 WhatsApp করুন
+        </a>
+
+
+        <a
+          class="btn btn-primary"
+          href="tel:+8801928807515"
+        >
+          📞 এখনই ফোন করুন
+        </a>
+
+
+        <a
+          class="btn btn-outline"
+          href="mailto:mdrafipk3@gmail.com"
+        >
+          📧 ইমেইল করুন
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SOCIAL MEDIA
+  ========================== -->
+
+  <section class="social-section">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        সোশ্যাল মিডিয়া
+      </span>
+
+      <h2>
+        আমাদের সাথে যুক্ত থাকুন
+      </h2>
+
+      <p>
+        আমাদের কার্যক্রম ও নতুন আপডেট পেতে
+        সোশ্যাল মিডিয়ায় যুক্ত থাকুন।
+      </p>
+
+    </div>
+
+
+    <div class="social-buttons">
+
+      <!-- FACEBOOK -->
+
+      <a
+        href="https://www.facebook.com/share/19eXNnKw2X/"
+        target="_blank"
+        rel="noopener"
+        class="social-btn"
+      >
+        📘 Facebook Page
+      </a>
+
+
+      <!-- YOUTUBE -->
+
+      <a
+        href="https://www.youtube.com/@sktelevision6784"
+        target="_blank"
+        rel="noopener"
+        class="social-btn"
+      >
+        ▶️ YouTube Channel
+      </a>
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/8801928807515"
+        target="_blank"
+        rel="noopener"
+        class="social-btn"
+      >
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        🤝
+      </div>
+
+      <h3>
+        প্রবাসী ও যুব কল্যাণ সমবায় সমিতি
+      </h3>
+
+      <p>
+        ঐক্য • সহযোগিতা • উন্নয়ন • কল্যাণ
+      </p>
+
+
+      <div class="footer-links">
+
+        <a href="#home">
+          হোম
+        </a>
+
+        <a href="#about">
+          আমাদের সম্পর্কে
+        </a>
+
+        <a href="#activities">
+          কার্যক্রম
+        </a>
+
+        <a href="#members">
+          সদস্যবৃন্দ
+        </a>
+
+        <a href="#contact">
+          যোগাযোগ
+        </a>
+
+        <a
+          href="https://www.facebook.com/share/19eXNnKw2X/"
+          target="_blank"
+          rel="noopener"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://www.youtube.com/@sktelevision6784"
+          target="_blank"
+          rel="noopener"
+        >
+          YouTube
+        </a>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <p>
+          © 2026 প্রবাসী ও যুব কল্যাণ সমবায় সমিতি
+        </p>
+
+        <p>
+          সর্বস্বত্ব সংরক্ষিত
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE BOTTOM NAV
+  ========================== -->
+
+  <div class="mobile-nav">
+
+    <a href="#home">
+      <span>🏠</span>
+      হোম
+    </a>
+
+    <a href="#about">
+      <span>🏢</span>
+      সম্পর্কে
+    </a>
+
+    <a href="#activities">
+      <span>🤝</span>
+      কার্যক্রম
+    </a>
+
+    <a href="#members">
+      <span>👥</span>
+      সদস্য
+    </a>
+
+    <a href="#contact">
+      <span>📞</span>
+      যোগাযোগ
+    </a>
+
+  </div>
+
+</body>
+</html>
