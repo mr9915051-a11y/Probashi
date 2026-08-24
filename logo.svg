@@ -1,141 +1,116 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+    text-align:center;
+}
+
+.hero{
+    padding:30px 15px;
+    background:linear-gradient(180deg,#000,#151000);
+}
+
+.hero img{
+    width:220px;
+    height:220px;
+    object-fit:contain;
+    filter:drop-shadow(0 0 20px #ffd700);
+}
+
+.hero h1{
+    margin-top:20px;
+    font-size:32px;
+    color:#ffd700;
+    text-shadow:0 0 15px #ffd700;
+}
+
+.hero h2{
+    font-size:22px;
+    margin:15px 0;
+}
+
+.hero p{
+    font-size:18px;
+    color:#ddd;
+}
+
+
+.features{
+    padding:40px 15px;
+}
+
+.features h2{
+    font-size:38px;
+    color:#ffd700;
+    text-shadow:0 0 20px #ffd700;
+    margin-bottom:30px;
+}
+
+
+.feature-container{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    align-items:center;
+}
+
+
+.feature-card{
+    width:90%;
+    max-width:350px;
+    padding:18px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,215,0,0.4);
+    backdrop-filter:blur(10px);
+    color:white;
+    text-decoration:none;
+    font-size:22px;
+    box-shadow:0 0 20px #222;
+    transition:.3s;
+}
+
+
+.feature-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #ffd700;
+}
+
+
+.feature-icon{
+    font-size:35px;
+    margin-bottom:8px;
+}
+
+
+.video-gallery{
+    padding:30px 10px;
+}
+
+
+.video-gallery h2{
+    color:#ffd700;
+}
+
+
+@media(max-width:600px){
 
-<title>বাংলাদেশ প্রবাসী মঞ্চ ফাউন্ডেশন</title>
+.hero h1{
+    font-size:26px;
+}
 
-<link rel="stylesheet" href="style.css">
+.hero h2{
+    font-size:18px;
+}
 
-</head>
+.feature-card{
+    font-size:18px;
+}
 
-<body>
-
-<header>
-
-<img src="logo.png" class="logo">
-
-<h1>বাংলাদেশ প্রবাসী মঞ্চ ফাউন্ডেশন</h1>
-
-<h2>BANGLADESH PROBASHI MONCHO FOUNDATION</h2>
-
-<p>স্থান: কলারাপুর, মালয়েশিয়া</p>
-
-<p>স্থাপিত: 01.01.2026</p>
-
-</header>
-
-
-<section class="features">
-
-<h3>FEATURES</h3>
-
-<div class="grid">
-
-
-<a href="https://www.facebook.com/share/1AmwQ6uynF/">
-Facebook Page
-</a>
-
-
-<a href="https://www.youtube.com/@Bangladeshprobashifundclubf">
-YouTube
-</a>
-
-
-<a href="https://www.tiktok.com/@md.rafik7854">
-TikTok
-</a>
-
-
-<a href="https://www.facebook.com/share/g/1LGXj4cECY/">
-Facebook Group
-</a>
-
-
-<a href="https://m.me/j/AbazuYGAWNXaKYj3/">
-Messenger Group
-</a>
-
-
-<a href="https://chat.whatsapp.com/D09urUItfkdEjiVtqgIb7">
-WhatsApp Group
-</a>
-
-
-<a href="https://everify.bdris.gov.bd/">
-BDRIS Verify
-</a>
-
-
-<a href="https://www.expatservicesmy.com/ESKLPublicportal/Appointment/BookAppointment">
-Expat Services
-</a>
-
-
-<a href="https://wa.me/qr/5SBSJ55KMO7CB1">
-WhatsApp Contact
-</a>
-
-
-<a href="#">
-Contact
-</a>
-
-
-<a href="#">
-Member Support
-</a>
-
-
-<a href="#">
-Training
-</a>
-
-
-<a href="#">
-Community
-</a>
-
-
-</div>
-
-</section>
-
-
-
-<section class="videos">
-
-<h3>VIDEO GALLERY</h3>
-
-
-<iframe src="https://www.youtube.com/embed/Uvav8yUb93c"></iframe>
-
-<iframe src="https://www.youtube.com/embed/KumLOhgtgsM"></iframe>
-
-<iframe src="https://www.youtube.com/embed/DXB7gdJUlMw"></iframe>
-
-<iframe src="https://www.youtube.com/embed/I2mc2RXCEIA"></iframe>
-
-
-</section>
-
-
-
-<section class="whatsapp">
-
-<h3>WHATSAPP CONTACT</h3>
-
-<a href="https://wa.me/qr/5SBSJ55KMO7CB1">WhatsApp 1</a>
-
-<a href="https://wa.me/message/FQOUHFGB6I3BG1">WhatsApp 2</a>
-
-<a href="https://wa.me/message/OJAZRSZSSECCK1">WhatsApp 3</a>
-
-
-</section>
-
-
-</body>
-</html>
+}
